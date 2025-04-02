@@ -13,9 +13,11 @@ public class Main {
 //        System.out.println(singlyLinkedList.head.value);
 //        System.out.println(singlyLinkedList.head.next.value);
 //        System.out.println(singlyLinkedList.head.next.next.value);
-        singlyLinkedList.get(0);
-        singlyLinkedList.get(1);
-        singlyLinkedList.get(2);
-        singlyLinkedList.get(3);
+//        singlyLinkedList.get(0);
+//        singlyLinkedList.get(1);
+//        singlyLinkedList.get(2);
+//        singlyLinkedList.get(3);
+        System.out.println(singlyLinkedList.set(2, 100)); // true
+        System.out.println(singlyLinkedList.set(4, 100)); // false
     }
 }

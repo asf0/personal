@@ -31,6 +31,18 @@ public class SinglyLinkedList {
         }
         System.out.println(current.value);
     }
+    public boolean set(int index, int value) {
+        if (index < 0 || index >= size) {
+            return false;
+        }
+        Node current = head;
+        for (int i = 0; i < index; i++) {
+            current = current.next;
+
+        }
+        current.value = value;
+        return true;
+    }
 
     public String rotate(int number) {
         if (head == null) {

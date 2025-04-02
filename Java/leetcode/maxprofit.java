@@ -11,10 +11,10 @@ public class maxprofit {
         int left = 0;
         int right = x;
         while(left <= right) {
+            }
         }
-        }
+        return -1;
     }
-
 
 }
 
