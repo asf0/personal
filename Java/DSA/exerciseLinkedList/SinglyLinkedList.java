@@ -110,4 +110,26 @@ public class SinglyLinkedList {
         size++;
         return true;
     }
+    public Node remove(int index) {
+        if (index < 0 || index >= size) {
+            return null;
+        }
+        Node removedNode;
+        if (index == 0) {
+            removedNode = head;
+            head = head.next;
+        } else {
+            Node current = head;
+            for (int i = 0; i < index - 1; i++) {
+                current = current.next;
+            }
+            removedNode = current.next;
+            current.next = removedNode.next;
+            if (removedNode == tail) {
+                tail = current;
+            }
+        }
+        size--;
+        return removedNode;
+    }
 }
