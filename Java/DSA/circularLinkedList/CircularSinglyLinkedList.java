@@ -6,8 +6,8 @@ public class CircularSinglyLinkedList {
     public int size;
 
     public Node createCSLL(int nodeValue) {
-        Node node = new Node();
-        node.value = nodeValue;
+        Node node = new Node(nodeValue);
+        //node.value = nodeValue;
         node.next = node;
         head = node;
         tail = node;
@@ -16,8 +16,8 @@ public class CircularSinglyLinkedList {
     }
 
     public void inserCSLL(int nodeValue, int location) {
-        Node node = new Node();
-        node.value = nodeValue;
+        Node node = new Node(nodeValue);
+        //node.value = nodeValue;
         if (head == null) {
             createCSLL(nodeValue);
             return;
