@@ -3,4 +3,6 @@ out/
 *.class
 .DS_Store
 *.iml
-Ensign/
+Ensign/desktop.ini
+*.ico
+*.png
