@@ -17,9 +17,7 @@ public class Main {
         for(int j = low; j < high; j++) {
             if (array[j] < pivot) {
                 i++;
-                int temp = array[i];
-                array[i] = array[j];
-                array[j] = temp;
+                swap(array, i, j);
             }
         }
         int temp = array[i + 1];
@@ -45,12 +43,29 @@ public class Main {
 
         // swap the randomly chosen pivot with the last element
 
-        int temp = arr[randomPivotIndex];
-        arr[randomPivotIndex] = arr[high];
-        arr[high] = temp;
+        swap(arr, randomPivotIndex, high);
 
         return partition(arr, low, high);
+    }
 
+    public static int medianOfThree(int[] arr, int low, int high) {
+        int mid = low + (high - low) / 2;
 
+        if (arr[low] < arr[mid] && arr[mid] < arr[high]) {
+            //the middle element is the medium value
+            swap(arr, mid, high);
+        } else if (arr[low] > arr[mid] && arr[low] < arr[high]) {
+            //the low element is the medium value
+            swap(arr,low, high);
+        }
+        // the high element is the meidum value
+        return arr[high];
+    }
+
+    // method to swap two elements in the array
+    public static void swap(int[] arr, int i, int j) {
+        int temp = arr[i];
+        arr[i] = arr[j];
+        arr[j]= temp;
     }
 }
