@@ -1,6 +1,7 @@
 package QuickSort;
 
 import java.util.Arrays;
+import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
@@ -29,9 +30,27 @@ public class Main {
 
     public static void quickSort(int[] array, int low, int high) {
         if (low < high) {
-            int pi = partition(array, low, high);
+            int pi = randomPartition(array, low, high);
             quickSort(array, low, pi - 1);
             quickSort(array, pi + 1, high);
         }
+    }
+
+    public static int randomPartition(int[] arr, int low, int high) {
+        // Random object for generating random pivot index
+
+        Random rand = new Random();
+        // generate a random pivot index between low and high
+        int randomPivotIndex = low + rand.nextInt(high - low + 1);
+
+        // swap the randomly chosen pivot with the last element
+
+        int temp = arr[randomPivotIndex];
+        arr[randomPivotIndex] = arr[high];
+        arr[high] = temp;
+
+        return partition(arr, low, high);
+
+
     }
 }
