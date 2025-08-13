@@ -26,11 +26,6 @@ public class App
 
 
 
-
-
-
-
-
 //        try {
 //            Class.forName("com.mysql.cj.jdbc.Driver");
 //            Enumeration<Driver> drivers = DriverManager.getDrivers();
