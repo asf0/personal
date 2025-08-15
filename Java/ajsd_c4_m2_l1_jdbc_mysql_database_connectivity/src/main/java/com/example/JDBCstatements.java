@@ -8,29 +8,29 @@ import java.sql.*;
 public class JDBCstatements {
     public static void main( String[] args ) {
         String url = "jdbc:postgresql://localhost:5432/chinook";
-        String user = "ataide";
-        String password = "";
+        String user = "postgres";
+        String password = "123";
         try (Connection connection = DriverManager.getConnection(url, user, password)) {
-            Statement stmt = connection.createStatement();
-
-            String sql = "INSERT INTO Track(track_id, name, album_id, media_type_id," + "genre_id, composer, milliseconds, bytes, unit_price)" +
-                    "VALUES(7500, 'New Track',1,2,5, 'Composer Name', 300000, 5000000, 0.99)";
-            int rowsAffected =  stmt.executeUpdate(sql);
-            System.out.println("Rows affected " + rowsAffected);
+//            Statement stmt = connection.createStatement();
+//
+//            String sql = "INSERT INTO Track(track_id, name, album_id, media_type_id," + "genre_id, composer, milliseconds, bytes, unit_price)" +
+//                    "VALUES(7500, 'New Track',1,2,5, 'Composer Name', 300000, 5000000, 0.99)";
+//            int rowsAffected =  stmt.executeUpdate(sql);
+//            System.out.println("Rows affected " + rowsAffected);
 
 //            // Challange
-//
-//            String query = "SELECT name from Track WHERE genre_id = (SELECT genre_id FROM Genre WHERE name = ?)";
-//            PreparedStatement pstmt = connection.prepareStatement(query);
-//            pstmt.setString(1, "Rock");
-//            ResultSet rs = pstmt.executeQuery();
-//
-//            while(rs.next()) {
-//                String trackName = rs.getString("name");
-//                System.out.println("Track: " + trackName);
-//            }
-//            rs.close();
-//            pstmt.close();
+
+            String query = "SELECT name from Track WHERE genre_id = (SELECT genre_id FROM Genre WHERE name = ?)";
+            PreparedStatement pstmt = connection.prepareStatement(query);
+            pstmt.setString(1, "Rock");
+            ResultSet rs = pstmt.executeQuery();
+
+            while(rs.next()) {
+                String trackName = rs.getString("name");
+                System.out.println("Track: " + trackName);
+            }
+            rs.close();
+            pstmt.close();
 
 
 
