@@ -1,11 +1,15 @@
 package com.example;
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 
 public class ExecutingDDL {
     private static Connection getDababaseConnection() {
         String url = "jdbc:postgresql://localhost:5432/postgres";
-        String user = "ataide";
+        String user = "x";
         String password = "";
 
         try {

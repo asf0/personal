@@ -1,11 +1,11 @@
 package com.example;
 
-import org.postgresql.ds.PGSimpleDataSource;
-
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+
+import org.postgresql.ds.PGSimpleDataSource;
 
 public class DataSourceConnectionHelper {
 
@@ -32,7 +32,7 @@ public class DataSourceConnectionHelper {
 
     public static void main(String[] args) {
         String url = "jdbc:postgresql://localhost:5432/";
-        String user = "ataide";
+        String user = "x";
         String password = "";
         connect(url, user, password);
     }

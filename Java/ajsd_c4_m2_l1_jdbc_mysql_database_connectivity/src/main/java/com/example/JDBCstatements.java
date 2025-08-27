@@ -1,15 +1,16 @@
 package com.example;
 
-import javax.swing.plaf.nimbus.State;
-import javax.xml.transform.Result;
-import java.math.BigDecimal;
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 public class JDBCstatements {
     public static void main( String[] args ) {
         String url = "jdbc:postgresql://localhost:5432/chinook";
-        String user = "postgres";
-        String password = "123";
+        String user = "x";
+        String password = "x";
         try (Connection connection = DriverManager.getConnection(url, user, password)) {
 //            Statement stmt = connection.createStatement();
 //

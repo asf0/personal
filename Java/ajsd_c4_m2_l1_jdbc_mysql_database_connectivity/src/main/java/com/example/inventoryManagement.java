@@ -2,7 +2,7 @@ package com.example;
 
 import java.sql.*;
 
-public class inventoryManagement {
+public class  inventoryManagement {
     public static void main(String[] args) {
         Connection conn = getDatabaseConnection();
         if(conn != null) {

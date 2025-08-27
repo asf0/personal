@@ -1,8 +1,129 @@
+# Build and Output Directories
 out/
-.idea/
+target/
+build/
+dist/
 *.class
-.DS_Store
+
+# IDE Files - IntelliJ IDEA
+.idea/
 *.iml
+*.ipr
+*.iws
+
+# IDE Files - VS Code
+.vscode/
+*.code-workspace
+
+# IDE Files - Eclipse
+.project
+.classpath
+.settings/
+.metadata/
+
+# IDE Files - NetBeans
+nbproject/
+nbbuild/
+nbdist/
+.nb-gradle/
+
+# Database Configuration Files (SENSITIVE - NEVER COMMIT)
+database.properties
+src/main/resources/database.properties
+**/database.properties
+database-*.properties
+*credentials*.properties
+*config*.properties
+
+# Environment Variables and Secrets
+.env
+.env.local
+.env.production
+.env.staging
+*.key
+*.pem
+secrets/
+
+# Operating System Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# Java/Maven/Gradle specific
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+.gradle/
+gradle-app.setting
+!gradle-wrapper.jar
+
+# Logs and Temp Files
+*.log
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+.cache/
+logs/
+
+# Application Specific
 Ensign/
+
+# Media Files (if they're auto-generated or not needed in repo)
+# Remove these lines if you DO want to track images
 *.ico
 *.png
+*.jpg
+*.jpeg
+*.gif
+*.svg
+*.bmp
+*.webp
+
+# Package Files
+*.7z
+*.dmg
+*.gz
+*.iso
+*.rar
+*.tar
+*.zip
+
+# Runtime and compiled files
+*.exe
+*.o
+*.so
+*.dll
+
+# Backup files
+*.bak
+*.backup
+*~
+
+# Node.js (if you use any JS tools)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Python (if you use any Python tools)
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+pip-log.txt
+
+# Local configuration override files
+local.properties
+application-local.yml
+application-local.properties

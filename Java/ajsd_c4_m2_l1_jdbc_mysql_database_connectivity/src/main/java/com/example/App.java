@@ -1,16 +1,36 @@
 package com.example;
 
+import java.io.IOException;
+import java.io.InputStream;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-import java.util.Enumeration;
-import java.sql.Driver;
+import java.util.Properties;
 
 public class App
 {
+    private static Properties dbProperties = null;
+
+        private static void loadDatabaseProperties() {
+        if (dbProperties == null) {
+            dbProperties = new Properties();
+            try (InputStream input = App.class.getClassLoader().getResourceAsStream("database.properties")) {
+                if (input == null) {
+                    System.err.println("Unable to find database.properties file");
+                    return;
+                }
+                dbProperties.load(input);
+                System.out.println("Database properties loaded successfully");
+            } catch (IOException e) {
+                System.err.println("Error loading database properties: " + e.getMessage());
+                e.printStackTrace();
+            }
+        }
+    }
+    
     public static void main( String[] args ) {
         String url = "jdbc:postgresql://localhost:5432/chinook";
-        String user = "ataide";
+        String user = "x";
         String password = "";
         try (Connection connection = DriverManager.getConnection(url, user, password)) {
             if (connection != null) {
