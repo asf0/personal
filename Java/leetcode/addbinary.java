@@ -1,7 +1,9 @@
-class addbinary {
+class AddBinary {
+
     public String addbinary(String a, String b) {
         StringBuilder sb = new StringBuilder();
-        int i = a.length() - 1, j = b.length() - 1;
+        int i = a.length() - 1,
+            j = b.length() - 1;
         int carry = 0;
         while (i >= 0 || j >= 0) {
             int sum = carry;
@@ -13,9 +15,11 @@ class addbinary {
         if (carry != 0) sb.append(carry);
         return sb.reverse().toString();
     }
+
     public static void main(String[] args) {
         addbinary obj = new addbinary();
-        String a = "1010", b = "1011";
+        String a = "1010",
+            b = "1011";
         System.out.println(obj.addbinary(a, b));
     }
 }
