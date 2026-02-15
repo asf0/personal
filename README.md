@@ -1,91 +1,105 @@
 # Personal Project
 
 ## Description
-The "Personal" project is a Java-based collection of algorithms and data structures, aimed at demonstrating fundamental computer science concepts. This repository includes implementations of various search algorithms, sorting algorithms, and data structures such as linked lists, hash maps, and trees, making it a valuable resource for learning and reference.
+This project is a collection of various data structures and algorithms implemented in Java. It includes a variety of search algorithms, sorting algorithms, as well as implementations of common data structures like linked lists and hash maps. The project serves as an educational resource to understand the fundamentals of computer science concepts.
 
 ## Features
-- Implementations of common search algorithms:
+- Implementations of common searching algorithms:
   - Linear Search
   - Binary Search
-- Implementations of popular sorting algorithms:
+- Implementations of various sorting algorithms:
   - Bubble Sort
   - Insertion Sort
+  - Selection Sort
   - Merge Sort
   - Quick Sort
-  - Selection Sort
 - Data structures:
   - ArrayList
   - Doubly Linked List
   - Circular Linked List
-  - Hash Map
-  - Linked Hash Map
-  - Tree Map
-- Performance analysis of sorting algorithms
+  - HashMap
+  - LinkedHashMap
+  - TreeMap
+- Performance testing for sorting algorithms
+- Various example applications demonstrating the use of data structures and algorithms
 
 ## Technologies Used
-- Java 8 or higher
+- **Java**: The primary programming language used for implementation.
 
 ## Prerequisites
 To run this project locally, you will need:
-- **Java Development Kit (JDK)**: Ensure that you have JDK 8 or higher installed. You can download it from [Oracle's official website](https://www.oracle.com/java/technologies/javase-jdk8-downloads.html) or install it using a package manager for your OS.
+- Java Development Kit (JDK) version 8 or higher
+- An Integrated Development Environment (IDE) such as IntelliJ IDEA, Eclipse, or Visual Studio Code
 
 ## How to Run Locally
 
-### Step 1: Clone the Repository
-Open your terminal and run the following command to clone the repository:
-```bash
-git clone https://github.com/yourusername/personal.git
-cd personal/Java/AMZ/src
-```
+1. **Clone the Repository**
+   ```bash
+   git clone https://github.com/yourusername/personal.git
+   cd personal
+   ```
 
-### Step 2: Compile the Java Files
-You will need to compile the Java files. Navigate to the respective directories for each algorithm or data structure and compile them. For example:
-```bash
-javac BinarySearch/Main.java
-javac BubbleSort/Main.java
-javac InsertionSort/Main.java
-# Repeat for other Java files as necessary
-```
+2. **Install Java**
+   - Ensure you have JDK installed. You can download it from [Oracle's official website](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html) or use a package manager like Homebrew on macOS:
+     ```bash
+     brew install openjdk
+     ```
 
-### Step 3: Run the Java Programs
-After compiling, you can run the Java programs. For instance, to run the Binary Search implementation, execute:
-```bash
-java BinarySearch.Main
-```
-Repeat this for other main classes found in their respective directories.
+3. **Set Up Your IDE**
+   - Open your IDE and import the cloned project.
 
-### Step 4: (Optional) Performance Tests
-If you want to test the performance of sorting algorithms, navigate to their respective directories (e.g., `BubbleSort`) and run the performance test classes:
-```bash
-java BubbleSort.BubbleSortPerformance
-```
+4. **Building the Project**
+   - If you're using an IDE, it will typically handle the build process automatically. Otherwise, you can compile the Java files using the command line:
+     ```bash
+     cd Java/AMZ/src
+     javac **/*.java
+     ```
+
+5. **Run the Applications**
+   - Navigate to the specific directory of the class you want to run, for example:
+     ```bash
+     cd BinarySearch
+     java Main
+     ```
+   - Repeat for other algorithms or data structures as needed.
+
+6. **Testing the Implementations**
+   - Tests are not explicitly defined in this repository. You can add unit tests using JUnit or create main methods in your classes to test functionalities.
 
 ## Project Structure
 ```
 Java/
- └── AMZ/
-     └── src/
-         ├── BinarySearch/
-         ├── BubbleSort/
-         ├── DoublyLinkedList/
-         ├── HashMap/
-         ├── InsertionSort/
-         ├── LinearSearch/
-         ├── LinkedHashMap/
-         ├── MergeSort/
-         ├── QuickSort/
-         ├── SelectionSort/
-         ├── TreeMap/
-         └── stacks/
+├── AMZ/
+│   ├── src/
+│   │   ├── BinarySearch/
+│   │   │   └── Main.java
+│   │   ├── BubbleSort/
+│   │   │   ├── BubbleSortPerformance.java
+│   │   │   └── Main.java
+│   │   ├── DoublyLinkedList/
+│   │   │   └── Recipe.java
+│   │   ├── HashMap/
+│   │   │   └── hashMapIteration.java
+│   │   ├── InsertionSort/
+│   │   │   └── Main.java
+│   │   ├── LinearSearch/
+│   │   │   └── Main.java
+│   │   ├── LinkedHashMap/
+│   │   │   ├── Main.java
+│   │   │   └── linkedHashMap.java
+│   │   ├── MergeSort/
+│   │   │   └── Main.java
+│   │   ├── QuickSort/
+│   │   ├── SelectionSort/
+│   │   ├── TreeMap/
+│   │   └── stacks/
+└── DSA/
+    ├── arrayList/
+    ├── arrayexercises/
+    ├── circularLinkedList/
 ```
 
-- **BinarySearch**: Contains implementations of binary search algorithms.
-- **BubbleSort, InsertionSort, MergeSort, QuickSort, SelectionSort**: Directories for various sorting algorithm implementations.
-- **DoublyLinkedList, HashMap, LinkedHashMap, TreeMap**: Directories containing Java implementations of different data structures.
-- **stacks**: Contains stack-related implementations.
-
 ## Configuration
-Currently, there are no specific configuration files required for this project. All necessary configurations are handled within the Java files. However, ensure your Java environment is correctly set up, and feel free to modify any Java source files according to your needs.
+No specific configuration files are found in this repository. Ensure your Java environment is correctly set up, and modify any paths if necessary while running the applications.
 
-## Conclusion
-This project serves as an educational resource to understand and implement basic algorithms and data structures in Java. Feel free to contribute or modify the code for your learning purposes.
+For further assistance, feel free to reach out or open an issue in the repository.
